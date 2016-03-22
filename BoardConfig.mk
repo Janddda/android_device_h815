@@ -48,8 +48,8 @@ TARGET_NO_BOOTLOADER := true
 TARGET_USES_C2D_COMPOSITION := true
 
 # Kernel
-BOARD_KERNEL_PREBUILT_DT := true
-BOARD_CUSTOM_BOOTIMG_MK := device/lge/h815/mkbootimg.mk
+
+BOARD_CUSTOM_BOOTIMG_MK := $(LOCAL_PATH)/mkbootimg.mk
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom user_debug=31 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 msm_rtb.filter=0x37 boot_cpus=0-5
 BOARD_KERNEL_BASE := 0x00078000
 BOARD_KERNEL_PAGESIZE := 4096
@@ -59,8 +59,8 @@ BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x01f88000 --tags_offset 0x01d88000
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
-TARGET_KERNEL_SOURCE := kernel/H815_kernel
-TARGET_KERNEL_CONFIG := aosp_h815_defconfig
+TARGET_KERNEL_SOURCE := kernel/lge/msm8992
+TARGET_KERNEL_CONFIG := cyanogenmod_h815_defconfig
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 TARGET_USES_UNCOMPRESSED_KERNEL := true
 
